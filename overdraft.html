@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Overdraft Calculator | Darwin Capital</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container navbar">
+      <a href="index.html" class="logo">DARWIN <span>CAPITAL</span></a>
+      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="products.html" class="nav-link">Products</a></li>
+        <li><a href="emi-calculator.html" class="nav-link">EMI Calculator</a></li>
+        <li><a href="overdraft.html" class="nav-link active">Overdraft Calc</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="login.html" class="btn btn-primary">Login</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <h1 class="section-title">Overdraft Interest Calculator</h1>
+      <p class="section-subtitle">Compute estimated daily interest expenses based on your utilised credit limit.</p>
+      
+      <div class="calc-box">
+        <form id="overdraft-form" oninput="calculateOverdraft()">
+          <div class="form-group">
+            <label for="sanctionedLimit">Sanctioned Limit (₹)</label>
+            <input type="number" id="sanctionedLimit" value="500000">
+          </div>
+          <div class="form-group">
+            <label for="amountUtilised">Amount Utilised (₹)</label>
+            <input type="number" id="amountUtilised" value="200000">
+          </div>
+          <div class="form-group">
+            <label for="odRate">Annual Interest Rate (%)</label>
+            <input type="number" id="odRate" value="14" step="0.1">
+          </div>
+          <div class="form-group">
+            <label for="odDays">Number of Days Utilised</label>
+            <input type="number" id="odDays" value="30">
+          </div>
+        </form>
+
+        <div class="calc-output">
+          <div class="calc-output-item">
+            <span>Amount Used</span>
+            <strong id="resUtilized">₹0</strong>
+          </div>
+          <div class="calc-output-item">
+            <span>Unused Limit</span>
+            <strong id="resUnused">₹0</strong>
+          </div>
+          <div class="calc-output-item">
+            <span>Interest Rate</span>
+            <strong id="resRate">0%</strong>
+          </div>
+          <div class="calc-output-item">
+            <span>Days</span>
+            <strong id="resDays">0 Days</strong>
+          </div>
+          <div class="calc-output-item">
+            <span>Est. Interest</span>
+            <strong id="resEstInterest">₹0</strong>
+          </div>
+        </div>
+
+        <p class="disclaimer-text">
+          *Calculations are indicative estimates based on daily simple interest formula. Actual lender processing, periodic rest adjustments, taxes, and fees may vary.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Darwin Capital. Contact: hr@darwincapital.in | +91 9354693289</p>
+    </div>
+  </footer>
+  <script src="assets/app.js"></script>
+</body>
+</html>
