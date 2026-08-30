@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EMI Calculator | Darwin Capital</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container navbar">
+      <a href="index.html" class="logo">DARWIN <span>CAPITAL</span></a>
+      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="products.html" class="nav-link">Products</a></li>
+        <li><a href="emi-calculator.html" class="nav-link active">EMI Calculator</a></li>
+        <li><a href="overdraft.html" class="nav-link">Overdraft Calc</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="login.html" class="btn btn-primary">Login</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <h1 class="section-title">Equated Monthly Instalment (EMI) Calculator</h1>
+      <p class="section-subtitle">Plan your loan commitments dynamically before submitting an enquiry.</p>
+      
+      <div class="calc-box">
+        <form id="emi-form" oninput="calculateEMI()">
+          <div class="form-group">
+            <label for="loanAmount">Loan Amount (₹)</label>
+            <input type="number" id="loanAmount" value="1000000" min="10000" step="10000">
+          </div>
+          <div class="form-group">
+            <label for="interestRate">Interest Rate (% Per Annum)</label>
+            <input type="number" id="interestRate" value="12" min="1" max="50" step="0.1">
+          </div>
+          <div class="form-group">
+            <label for="loanTenure">Loan Tenure (Years)</label>
+            <input type="number" id="loanTenure" value="5" min="1" max="30">
+          </div>
+        </form>
+
+        <div class="calc-output">
+          <div class="calc-output-item">
+            <span>Monthly EMI</span>
+            <strong id="resEMI">₹0</strong>
+          </div>
+          <div class="calc-output-item">
+            <span>Principal Amount</span>
+            <strong id="resPrincipal">₹0</strong>
+          </div>
+          <div class="calc-output-item">
+            <span>Total Interest</span>
+            <strong id="resInterest">₹0</strong>
+          </div>
+          <div class="calc-output-item">
+            <span>Total Payment</span>
+            <strong id="resTotal">₹0</strong>
+          </div>
+          <div class="calc-output-item">
+            <span>Tenure</span>
+            <strong id="resMonths">0 Months</strong>
+          </div>
+        </div>
+
+        <p class="disclaimer-text">
+          *The EMI shown is an illustrative estimate. Actual rates, fees, tenure and repayment terms may vary depending on the lender and applicant eligibility.
+        </p>
+        <br>
+        <div style="text-align: center;">
+          <a href="contact.html" class="btn btn-primary">Enquire About This Amount</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Darwin Capital. Contact: hr@darwincapital.in | +91 9354693289</p>
+    </div>
+  </footer>
+  <script src="assets/app.js"></script>
+</body>
+</html>
