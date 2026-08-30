@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Login | Darwin Capital</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container navbar">
+      <a href="index.html" class="logo">DARWIN <span>CAPITAL</span></a>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container" style="max-width: 450px;">
+      <div class="card">
+        <h2 style="text-align: center; margin-bottom: 1.5rem;">Customer Portal</h2>
+        
+        <form onsubmit="event.preventDefault(); alert('Backend Authentication UI Demo: Connect your backend provider (Firebase/Supabase/Auth0) to enable live login.');">
+          <div class="form-group">
+            <label>Email or Mobile Number</label>
+            <input type="text" required placeholder="user@example.com">
+          </div>
+          <div class="form-group">
+            <label>Password</label>
+            <input type="password" required id="passInput">
+          </div>
+          <div class="form-group" style="display: flex; justify-content: space-between; font-size: 0.85rem;">
+            <label><input type="checkbox" style="width: auto;"> Remember Me</label>
+            <a href="#" style="color: var(--accent-blue);">Forgot Password?</a>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Sign In</button>
+        </form>
+        
+        <div style="text-align: center; margin-top: 1.5rem; font-size: 0.9rem;">
+          Don't have an account? <a href="contact.html" style="color: var(--accent-blue); font-weight: bold;">Apply Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Darwin Capital. Contact: hr@darwincapital.in | +91 9354693289</p>
+    </div>
+  </footer>
+  <script src="assets/app.js"></script>
+</body>
+</html>
